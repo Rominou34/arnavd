@@ -26,7 +26,7 @@ html {
 }
 
 body {
-	background-color: rgba(24,24,24,0.8);
+	background-color: rgba(24,24,24,0.90);
 }
 
 header {
@@ -47,7 +47,7 @@ header h1 {
 
 header hr {
 	width: 20%;
-	margin: 36px auto;
+	margin: 24px auto;
 }
 
 header h2 {
@@ -55,10 +55,20 @@ header h2 {
 	font-weight: lighter;
 }
 
+header #bio {
+	margin: 96px auto;
+	text-align: justify;
+	width: 90%;
+	max-width: 800px;
+}
+
 header > .social-links {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
 }
 
 header > .social-links > a {
@@ -69,6 +79,14 @@ header > .social-links > a {
 
 h3 {
 	text-align: center;
+	font-size: 48px;
+	margin: 24px 0;
+}
+
+h4 {
+	font-size: 32px;
+	text-decoration: underline;
+	margin: 16px 0;
 }
 
 main {
@@ -78,4 +96,46 @@ main {
 .soundcloud {
 	width: 80%;
 	margin: 24px auto;
+}
+
+/*
+ * RELEASES
+ */
+
+.releases-list {
+	display: flex;
+	align-items: left;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: wrap;
+	width: 90%;
+	max-width: 800px;
+}
+
+.release {
+	flex: 50% 0 0;
+	height: 240px;
+	text-align: center;
+}
+
+.release-inner {
+	background-color: rgba(24,24,24,0.75);
+	height: 100%;
+}
+
+.release-title {
+	font-size: 24px;
+	padding: 8px;
+	font-weight: bold;
+}
+
+.release-type {
+	font-size: 18px;
+	font-style: italic;
+}
+
+#dawn {
+	background-image: url(../img/dawn_artwork_small.jpg);
+	background-size: cover;
+	background-position: center;
 }
