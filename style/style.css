@@ -16,6 +16,7 @@ html, body, p, div, article, h1, h2, h3, h4, h5, h6, form {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	transition: 0.25s;
 }
 
 html {
@@ -39,6 +40,8 @@ header > .main-title {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	width: 90%;
+	max-width: 1200px;
 }
 
 header h1 {
@@ -58,7 +61,6 @@ header h2 {
 header #bio {
 	margin: 96px auto;
 	text-align: justify;
-	width: 90%;
 	max-width: 800px;
 }
 
@@ -66,7 +68,6 @@ header > .social-links {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	width: 90%;
 	max-width: 800px;
 	margin: auto;
 }
@@ -109,33 +110,61 @@ main {
 	align-items: stretch;
 	flex-wrap: wrap;
 	width: 90%;
-	max-width: 800px;
+	max-width: 1200px;
 }
 
 .release {
-	flex: 50% 0 0;
+	flex: 240px 0 0;
 	height: 240px;
 	text-align: center;
+	border: solid 10px #212528;
+	overflow: hidden;
+	display: inline-flex;
+	flex-direction: column;
 }
 
-.release-inner {
-	background-color: rgba(24,24,24,0.75);
-	height: 100%;
+.release-artwork {
+	flex-basis: 100%;
+	flex-grow: 1;
+	flex-shrink: 0;
+	background: #444;
 }
 
 .release-title {
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 1;
+	background-color: #212528;
+	padding: 4px;
+	width: 100%;
+}
+
+.release-title > .name {
 	font-size: 24px;
-	padding: 8px;
 	font-weight: bold;
 }
 
-.release-type {
+.release-title > .date {
 	font-size: 18px;
 	font-style: italic;
 }
 
-#dawn {
+.release:hover {
+	cursor: pointer;
+}
+
+.release:hover .release-artwork {
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+.release:hover .release-title {
+	flex-grow: 1;
+	flex-shrinl: 0;
+}
+
+#dawn .release-artwork {
 	background-image: url(../img/dawn_artwork_small.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 }
