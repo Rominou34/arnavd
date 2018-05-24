@@ -1,0 +1,36 @@
+html {
+	width: 100%;
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-family: Montserrat, sans-serif;
+  	background-color: #333;
+  	color: #eee;
+}
+
+html, body, p, div, article, h1, h2, h3, h4, h5, h6, form {
+	margin: 0px;
+	padding: 0px;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.25s;
+}
+
+body {
+	width: 100%;
+	max-width: 400px;
+	background-color: #444;
+	margin: auto;
+}
+
+#artwork {
+	width: 100%;
+	height: auto;
+}
+
+main {
+	padding: 48px;
+}

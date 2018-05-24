@@ -42,6 +42,7 @@ header > .main-title {
 	justify-content: center;
 	width: 90%;
 	max-width: 1200px;
+	margin: auto;
 }
 
 header h1 {
