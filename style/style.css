@@ -43,10 +43,11 @@ header > .main-title {
 	width: 90%;
 	max-width: 1200px;
 	margin: auto;
+	padding: 5vh 0;
 }
 
 header h1 {
-	font-size: 96px;
+	font-size: 10vh;
 }
 
 header hr {
@@ -57,10 +58,11 @@ header hr {
 header h2 {
 	font-size: 24px;
 	font-weight: lighter;
+	margin: 12px auto;
 }
 
 header #bio {
-	margin: 96px auto;
+	margin: auto;
 	text-align: justify;
 	max-width: 800px;
 }
@@ -70,7 +72,7 @@ header > .social-links {
 	align-items: center;
 	justify-content: space-around;
 	max-width: 800px;
-	margin: auto;
+	margin: 12px auto;
 }
 
 header > .social-links > a {
@@ -110,18 +112,18 @@ main {
 	justify-content: flex-start;
 	align-items: stretch;
 	flex-wrap: wrap;
-	width: 90%;
-	max-width: 1200px;
+	width: 1200px;
 }
 
 .release {
 	flex: 240px 0 0;
 	height: 240px;
 	text-align: center;
-	border: solid 10px #212528;
+	border: solid 10px #0b0c0c;
 	overflow: hidden;
 	display: inline-flex;
 	flex-direction: column;
+	margin: 24px;
 }
 
 .release-artwork {
@@ -129,13 +131,18 @@ main {
 	flex-grow: 1;
 	flex-shrink: 0;
 	background: #444;
+	background-size: cover;
+	background-position: top;
+	line-height: 140px;
+	font-size: 96px;
+	text-align: center;
 }
 
 .release-title {
 	flex-basis: auto;
 	flex-grow: 0;
 	flex-shrink: 1;
-	background-color: #212528;
+	background-color: #0b0c0c;
 	padding: 4px;
 	width: 100%;
 }
@@ -145,7 +152,7 @@ main {
 	font-weight: bold;
 }
 
-.release-title > .date {
+.release-title > .infos {
 	font-size: 18px;
 	font-style: italic;
 }
@@ -166,6 +173,58 @@ main {
 
 #dawn .release-artwork {
 	background-image: url(../img/dawn_artwork_small.jpg);
-	background-size: cover;
-	background-position: top;
 }
+#regular .release-artwork {
+	background-image: url(../img/regular_artwork_small.jpg);
+}
+#mary-jane .release-artwork {
+	background-image: url(../img/mary_jane_artwork_small.jpg);
+}
+#oldschool-sound .release-artwork {
+	background-image: url(../img/oldschool_sound_artwork_small.jpg);
+}
+#slow-down .release-artwork {
+	background-image: url(../img/slow_down_artwork_small.jpg);
+}
+#major-moves .release-artwork {
+	background-image: url(../img/major_moves_artwork_small.jpg);
+}
+#deep .release-artwork {
+	background-image: url(../img/deep_artwork_small.jpg);
+}
+
+/*
+ * MIXES
+ */
+.mixes .content {
+	font-size: 24px;
+	text-align: center;
+	margin: 24px 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+	.releases-list {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+}
+
+/* Mobile only */
+@media only screen and (orientation: portrait) {
+	main {
+		padding: 12px;
+	}
+	.releases-list {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	.release {
+		flex: calc(46vw - 12px) 0 0;
+		height: calc(46vw - 12px);
+		margin: 2vw;
+	}
+	.release-artwork {
+		font-size: 12vw;
+		line-height: 16vw;
+	}
