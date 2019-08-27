@@ -16,21 +16,66 @@ html, body, p, div, article, h1, h2, h3, h4, h5, h6, form {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	transition: 0.25s;
+	transition: all 0.25s;
 }
 
 body {
 	width: 100%;
-	max-width: 400px;
+	max-width: 1200px;
 	background-color: #444;
 	margin: auto;
 }
 
-#artwork {
-	width: 100%;
-	height: auto;
-}
-
 main {
 	padding: 48px;
+}
+
+h1 {
+	font-size: 64px;
+	margin: 12px 0;
+}
+
+#infos {
+	/*display: flex;*/
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: 24px 0;
+}
+#artwork-container {
+	flex: 300px 0 0;
+}
+#artwork {
+	width: 300px;
+	height: 300px;
+	background-size: contain;
+	background-position: left center;
+	float: left;
+	margin: 0 24px 24px 0;
+}
+#description {
+	/*
+	flex: calc(100% - 320px) 1 0;
+	padding-left: 24px;
+	*/
+}
+
+#infos h3 {
+	margin: 18px 0;
+}
+
+#infos h4 {
+	margin: 12px 0;
+	font-style: italic;
+}
+
+.song-infos {
+	margin: 12px 0;
+	font-weight: bold;
+}
+
+#listen > div {
+	width: 100%;
+	max-width: 600px;
+	margin: 48px auto;
 }
